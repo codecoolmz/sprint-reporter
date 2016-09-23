@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sprint Reporter</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container" style="text-align: left;">
+        <div class="page-header">
+            <h1>Sprint<kbd>reporter</kbd></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <nav class="navbar navbar-default navbar-top">
+            <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                    <li><a href="{{ url_for('add_user_story') }}">Add New User Story</a></li>
+                    <li><a href="{{ url_for('list_user_stories')}}"> List User Stories</a></li>
+            </ul>
+        </nav>
+
+        {% block body %}{% endblock %}
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+{% block body %}
+        <meta charset="utf-8">
+        <title>List User Stories</title>
+    </head>
+    <body>
+        <h1>List</h2>
+            <div class="container">
+
+
+  <div class="col-md-6 col-md-offset-6">
+
+    <!-- The table class adds nice spacing and the other classes add additional style -->
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+    <td colspan="4">User Stories</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+    <!-- You can adjust the width of table columns as well -->
+    <th class="col-md-2"></td>
+
+    <!-- Use text alignment like text-center or text-right -->
+    <th class="text-center">Average</td>
+    <th class="text-center">RBIs</td>
+    <th class="text-center">Homeruns</td>
+    </tr>
+    <tr>
+    <td><a href="#">Hank Aaron*</a></td>
+    <td>.305</td>
+    <td>2297</td>
+    <td>755</td>
+    </tr>
+    <tr>
+    <td><a href="#">Babe Ruth*</a></td>
+    <td>.342</td>
+    <td>2214</td>
+    <td>714</td>
+    </tr>
+    <tr>
+    <td><a href="#">Barry Bonds</a></td>
+    <td>.298</td>
+    <td>1996</td>
+    <td>762</td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
+
+    </body>
+{% endblock %}

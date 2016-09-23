@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    color: orange;
+    font-family: "Arial";
+    }
+
+
+h1 {
+    color: white;
+}
+
+
+kbd {
+    font-family: arial;
+    background-color: orange;
+    color: black;
+    }
+
+
+.navbar-default {
+    background-color: #151515;
+    color: white;
+    }
+
+
+
+.btn-succes {
+    border: 1px solid #585858;
+    color: #ffffff;
+    background: #424242
+}
+
+
+.input-group-addon {
+    background-color: #151515;
+}
+
+
+.form-control {
+    color: orange;
+    background-color: #424242;
+
+}

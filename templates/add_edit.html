@@ -1,0 +1,62 @@
+{% extends "index.html" %}
+{% block body %}
+
+<div>
+<style>
+    body {
+         text-align: center;
+    }
+</style>
+<body>
+    <h2>User story manager {{ event }}</h2>
+    <form action="" method="post">
+
+    <div class="input-group input-group-sm">
+      <span class="input-group-addon">Story Title</span>
+      <input class="form-control" required="true" name="story_title" value="{{user_story.story_title}}" >
+    </div><br>
+
+    <div class="input-group input-group-sm">
+      <span class="input-group-addon">User Story</span>
+      <input class="form-control" required="true" name="user_story" value="{{user_story.user_story}}">
+    </div><br>
+
+    <div class="input-group input-group-sm">
+      <span class="input-group-addon">Criteria</span>
+      <input class="form-control" required="true" name="criteria" value="{{user_story.criteria}}">
+    </div><br>
+
+    <div class="input-group input-group-sm">
+      <span class="input-group-addon">Business Value</span>
+      <input type="number" class="form-control" required="true" step="100" min="100" max="1500" name="business_value" value="{{user_story.business_value}}">
+    </div><br>
+
+    <div class="input-group input-group-sm">
+      <span class="input-group-addon">Estimation Time</span>
+      <input type="number" class="form-control" required="true" step="0.5" min="0.5" max="40" name="estimation_time" value="{{user_story.estimation_time}}">
+    </div><br>
+
+    <div class="form-group form-group-sm">
+        <span class="form-group-addon">Status</span>
+            <select class="form-control" value="status" name="status">
+                <option value="Planning">Planning</option>
+                <option value="To do">To do</option>
+                <option value="In progress">In progress</option>
+                <option value="Review">Review</option>
+                <option value="Done">Done</option>
+            </select>
+    </div>
+
+    <p><div><input class="btn btn-succes btn-xs" type="submit" value={{event}}></div></p>
+
+    </form>
+
+
+    {% for message in get_flashed_messages() %}
+        <p><font color="red">{{ message }}</font></p>
+    {% endfor %}
+</body>
+
+</html>
+
+{% endblock %}
